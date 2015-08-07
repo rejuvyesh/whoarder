@@ -32,7 +32,9 @@ class Clippings(object):
         '''
         clippings = ClippingsIterator(self.source)
         for clipping in clippings:
-            self.clippings.append(clipping)
+            # Only highlights
+            if clipping["type"] == "Highlight":
+                self.clippings.append(clipping)
 
         # will be useful in the HTML to group by book/author
         self.book_author_couples = set((clipping['book'], clipping['author'])
