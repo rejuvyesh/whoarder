@@ -69,38 +69,6 @@
         </script>
     </head>
     <body>
-        <div id="column">
-            {% autoescape true %}
-	        <h1>whoardings</h1>
-            <span id="search_actions">
-               You can <input type="text" id="search" placeholder="search..."/>
-            </span>
-	        <span id="sort_actions"> and sort by
-	           <a onclick="group_by('author')">author</a> /
-               <a onclick="group_by('book')">book</a>.
-            </span>
-			<ul id="clippings_list">
-            {% for b in book_author_couples %}
-            <li level="1" class="group" book="{{ b[0] }}" author="{{ b[1] }}">
-                <span class="group_book">{{ b[0] }}</span>
-                <span class="group_author">{{ b[1] }}</span>
-            </li>
-            {% endfor %}
-			{% for c in clippings %}
-			  <li level="2" author="{{ c.author }}" book="{{ c.book }}">
-			    <span class="contents">{{ c.contents }}</span><br />
-			    <span class="metadata">
-			      <span class="author">{{ c.author }}</span>
-			      , <span class="book">{{ c.book }}</span>.
-			      loc. <span class="location">{{ c.location }}</span>
-			      , clipped on <span class="date">{{ c.date }}</span>
-			    </span>
-			  </li>
-			{% endfor %}
-			</ul>
-			<div id="footer">Generated with <a href="https://github.com/ronjouch/whoarder">whoarder</a></div>
-            {% endautoescape %}
-		</div>
       <header>
         <div class="nav">
           <ul>
@@ -111,5 +79,45 @@
           </ul>
         </div>
       </header>
+
+      <div class="section">
+        <div class="container">
+          <div class="clips">
+            <div id="column">
+              {% autoescape true %}
+	            <h1 class="u-center">Clippings</h1>
+              <span id="search_actions">
+                You can <input type="text" id="search" placeholder="search..."/>
+              </span>
+	            <span id="sort_actions"> and sort by
+	              <a onclick="group_by('author')">author</a> /
+                <a onclick="group_by('book')">book</a>.
+              </span>
+			        <ul id="clippings_list">
+                {% for b in book_author_couples %}
+                <li level="1" class="group" book="{{ b[0] }}" author="{{ b[1] }}">
+                  <span class="group_book">{{ b[0] }}</span>
+                  <span class="group_author">{{ b[1] }}</span>
+                </li>
+                {% endfor %}
+			          {% for c in clippings %}
+			          <li level="2" author="{{ c.author }}" book="{{ c.book }}">
+			            <span class="contents">{{ c.contents }}</span><br />
+			            <span class="metadata">
+			              <span class="author">{{ c.author }}</span>
+			              , <span class="book">{{ c.book }}</span>.
+			              loc. <span class="location">{{ c.location }}</span>
+			              , clipped on <span class="date">{{ c.date }}</span>
+			            </span>
+			          </li>
+			          {% endfor %}
+			        </ul>
+			        <div id="footer">Generated with <a href="https://github.com/rejuvyesh/whoarder">whoarder</a></div>
+              {% endautoescape %}
+		        </div>
+          </div>
+        </div>
+      </div>
+    
 	</body>
 </html>
