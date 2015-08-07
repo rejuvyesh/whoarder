@@ -7,22 +7,25 @@
         <!-- [favicon, CSS, jQuery, a jQuery plugin] are embedded in the HTML header, because having a single-file output is a feature -->
         <link rel="stylesheet" href="/styles/site.css">
         <style type="text/css">
-            body {background: #F5F5F5; font-family: "Georgia", serif; font-size: 20px;}
-            h1 {font-size: 48px; padding-bottom: 10px; border-bottom: 1px dotted #BBB;}
-            li:not(.group) {padding: 5px; margin-bottom: 15px;}
-            li:nth-child(even):not(.group) {background: #EEE}
-            li:nth-child(odd) {}
-            ul {list-style-type:none; padding: 0;}
-            a {color: #116611; text-decoration: none;}
-            a:hover {text-decoration: underline; cursor:pointer;}
-            input {background: none; font-family: "Georgia", serif; font-size: 20px; border: none; border-bottom: 1px dashed #D1C7AC;}
-            .contents {}
-            .metadata {font-size: 12px; color: #888;}
-            #column {width: 90%; margin: auto;}
-            #footer {font-size: 16px; text-align: right; padding: 10px; border-top: 1px dotted #BBB;}
-            .group {font-size: 20px; font-weight: bold; color: #161; border-bottom: 1px solid #116611; padding-top: 15px;}
-            .right {float: right; font-weight: normal; color: #333;}
-            /*.hidden_author {display: none;}*/
+          .clips ul {list-style-type:none; padding: 0;}
+          .clips li:not(.group) {padding: 5px; margin-bottom: 15px;}
+          .clips li:nth-child(even):not(.group) {background: #EEE}
+          .clips li:nth-child(odd) {}
+          .clips a {color: #5ba3d7; text-decoration: none;}
+          .clips a:hover {text-decoration: underline; cursor:pointer;}
+          .clips input {background: none; font-size: 20px; border: none; border-bottom: 1px dashed #d1c7ac;}
+          .contents {}
+          .clips .metadata {font-size: 12px; color: #888;}
+          .clips .group {font-size: 2rem; font-weight: bold; color: #5baddd; border-bottom: 1px solid #5ba3d7; padding-top: 15px;}
+          .clips .group_author {color: #ff7b7b;}
+
+          .right {float: right; font-weight: normal; color: #333;}
+
+          #column {width: 90%; margin: auto;}
+          
+          #footer {font-size: 16px; text-align: right; padding: 10px; border-top: 1px dotted #BBB;}
+
+          /*.hidden_author {display: none;}*/
         </style>
         <script type="text/javascript" language="javascript">
         /*! jQuery v1.11.1 | (c) 2005, 2014 jQuery Foundation, Inc. | jquery.org/license */
